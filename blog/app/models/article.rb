@@ -7,8 +7,9 @@ class Article < ActiveRecord::Base
   def send_text
   	self.text = self.title if text.blank?
   end
+  
   after_save :send_message
   def send_message
-		puts 'saved successfully' 
+		puts 'saved successfull' 
   end
 end
